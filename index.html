@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Slick Slider Gallery</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    .slider {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .slider img {
+      display: block;
+      border-radius: 8px;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: #000;
+    }
+
+    .download-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .download-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div>
+      <img src="image1.jpg" alt="Image 1">
+      <a href="image1.jpg" download class="download-button">Download</a>
+    </div>
+    <div>
+      <img src="image2.jpg" alt="Image 2">
+      <a href="image2.jpg" download class="download-button">Download</a>
+    </div>
+    <div>
+      <img src="image3.jpg" alt="Image 3">
+      <a href="image3.jpg" download class="download-button">Download</a>
+    </div>
+    <div>
+      <img src="image4.jpg" alt="Image 4">
+      <a href="image4.jpg" download class="download-button">Download</a>
+    </div>
+    <div>
+      <img src="image5.jpg" alt="Image 5">
+      <a href="image5.jpg" download class="download-button">Download</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+        nextArrow: '<button type="button" class="slick-next">Next</button>'
+      });
+    });
+  </script>
+</body>
+</html>
